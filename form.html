@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="event.js"></script>
+</head>
+<body>
+    <div class="h-screen grid grid-cols-12">
+        <!-- Form -->
+        <div class="col-span-5 flex flex-col items-center justify-center gap-2 border px-4">
+            <input id="input-name" type="text" placeholder="Full Name" class="border w-full p-2 rounded">
+            <input id="input-email" type="text" placeholder="Email" class="border w-full p-2 rounded">
+            <textarea id="input-message" placeholder="Message" class="border w-full p-2 rounded h-[10rem]"></textarea>
+            <button
+                onclick="handleSubmit()"
+                class="bg-red-500 rounded text-white w-full"
+            >Simpan</button>
+            <button
+            onclick="handleShowData()"
+            class="bg-blue-500 rounded text-white w-full"
+                >Lihat semua data</button>
+        </div>
+        <!-- End Form -->
+        <!-- List Contact -->
+         <div class="col-span-7 border p-4">
+            <table class="w-full">
+                <thead class="border">
+                    <tr>
+                        <th class="w-0 px-1">#</th>
+                        <th class="border text-left px-1">Name</th>
+                        <th class="border text-left px-1">Email</th>
+                        <th class="border text-left px-1">Message</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                   
+                </tbody>
+            </table>
+         </div>
+        <!-- End List Contact -->
+    </div>
+</body>
+</html>
